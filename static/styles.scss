@@ -1,3 +1,7 @@
+$inset-bg: hsl(0, 0%, 95%);
+$inset-complement: hsl(0, 0%, 88%);
+$fg-primary: hsl(0, 0%, 20%);
+
 @media screen {
   /* Framework */
   html {
@@ -17,10 +21,10 @@
     overflow-y: auto;
 
     background: rgb(215, 215, 215);
-    background: -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background: -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -o-radial-gradient($inset-bg, rgb(190, 190, 190));
+    background: -moz-radial-gradient($inset-bg, rgb(190, 190, 190));
+    background: -webkit-radial-gradient($inset-bg, rgb(190, 190, 190));
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from($inset-bg), to(rgb(190, 190, 190)));
 
     -webkit-font-smoothing: antialiased;
   }
@@ -236,7 +240,7 @@
   }
 
   div.code {
-    background: rgb(240, 240, 240);
+    background: $inset-bg;
   }
 
   /* Add explicit links */
@@ -304,7 +308,7 @@ h1 {
 
   letter-spacing: -3px;
 
-  color: rgb(51, 51, 51);
+  color: $fg-primary;
 }
 
 h2 {
@@ -322,7 +326,7 @@ h2 {
 
   letter-spacing: -2px;
 
-  color: rgb(51, 51, 51);
+  color: $fg-primary;
 }
 
 h3 {
@@ -337,7 +341,7 @@ h3 {
 
   letter-spacing: -1px;
 
-  color: rgb(51, 51, 51);
+  color: $fg-primary;
 }
 
 ul {
@@ -357,8 +361,8 @@ div.code {
   margin-bottom: 20px;
   overflow: hidden;
 
-  background: rgb(240, 240, 240);
-  border: 1px solid rgb(224, 224, 224);
+  background: $inset-bg;
+  border: 1px solid $inset-complement;
 }
 pre {
   margin: 0;
@@ -395,7 +399,7 @@ th {
 }
 td,
 th {
-  border: 1px solid rgb(224, 224, 224);
+  border: 1px solid $inset-complement;
   padding: 5px 10px;
   vertical-align: top;
 }
