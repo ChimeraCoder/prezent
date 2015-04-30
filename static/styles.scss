@@ -1,6 +1,22 @@
-$inset-bg: hsl(0, 0%, 95%);
+$inset_bg: hsl(0, 0%, 95%);
+$inset_bg_grad: hsl(0, 0%, 75%); 
+$inset-fg: hsl(0, 0%, 0%);
 $inset-complement: hsl(0, 0%, 88%);
 $fg-primary: hsl(0, 0%, 20%);
+$bg-primary: hsl(0, 0, 84%);
+$term-bg: hsla(0, 0%, 13%, 1);
+$fg-accent: hsla(0, 0%, 0%, 0.1);
+$action: hsla(210, 100%, 40%, 1);
+$action-done: hsla(210, 100%, 40%, 0.75);
+$action-highlight: hsla(0, 0%, 0%, 1);
+
+$terminal-fg: hsla(0, 0%, 90%, 1);
+$terminal-fg-err: hsla(0, 100%, 89%, 1);
+$terminal-fg-info: hsla(49, 100%, 74%, 1);
+
+$image-info: hsl(0, 0%, 40%);
+$help-bg: hsl(0, 0%, 0%);
+
 
 @media screen {
   /* Framework */
@@ -20,11 +36,11 @@ $fg-primary: hsl(0, 0%, 20%);
     overflow-x: hidden;
     overflow-y: auto;
 
-    background: rgb(215, 215, 215);
-    background: -o-radial-gradient($inset-bg, rgb(190, 190, 190));
-    background: -moz-radial-gradient($inset-bg, rgb(190, 190, 190));
-    background: -webkit-radial-gradient($inset-bg, rgb(190, 190, 190));
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from($inset-bg), to(rgb(190, 190, 190)));
+    background: $bg-primary;
+    background: -o-radial-gradient($inset_bg, $inset_bg_grad);
+    background: -moz-radial-gradient($inset_bg, $inset_bg_grad);
+    background: -webkit-radial-gradient($inset_bg, $inset_bg_grad);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from($inset_bg), to($inset_bg_grad));
 
     -webkit-font-smoothing: antialiased;
   }
@@ -240,7 +256,7 @@ $fg-primary: hsl(0, 0%, 20%);
   }
 
   div.code {
-    background: $inset-bg;
+    background: $inset-fg;
   }
 
   /* Add explicit links */
@@ -260,8 +276,8 @@ $fg-primary: hsl(0, 0%, 20%);
 .slides > article {
   font-family: 'Open Sans', Arial, sans-serif;
 
-  color: black;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+  color: $fg-primary;
+  text-shadow: 0 1px 1px $fg-accent;
 
   font-size: 26px;
   line-height: 36px;
@@ -274,14 +290,15 @@ b {
 }
 
 a {
-  color: rgb(0, 102, 204);
+  color: $action;
   text-decoration: none;
 }
 a:visited {
-  color: rgba(0, 102, 204, .75);
+  color: $action-done;
+;
 }
 a:hover {
-  color: black;
+  color: $action-highlight;
 }
 
 p {
@@ -361,7 +378,7 @@ div.code {
   margin-bottom: 20px;
   overflow: hidden;
 
-  background: $inset-bg;
+  background: $inset_bg;
   border: 1px solid $inset-complement;
 }
 pre {
@@ -373,14 +390,14 @@ pre {
   line-height: 24px;
   letter-spacing: -1px;
 
-  color: black;
+  color: $inset-fg;
 }
 
 code {
   font-size: 95%;
   font-family: 'Droid Sans Mono', 'Courier New', monospace;
 
-  color: black;
+  color: $inset-fg;
 }
 
 article > .image {
@@ -421,7 +438,7 @@ div.output {
   top: 50%;
   right: 40px;
   bottom: 40px;
-  background: #202020;
+  background: $term-bg;
   padding: 5px 10px;
   z-index: 2;
 
@@ -441,13 +458,13 @@ div.output pre {
   overflow: auto;
 }
 div.output .stdout, div.output pre {
-  color: #e6e6e6;
+  color: $terminal-fg;
 }
 div.output .stderr, div.output .error {
-  color: rgb(255, 200, 200);
+  color: $terminal-fg-err;
 }
 div.output .system, div.output .exit {
-  color: rgb(255, 230, 120)
+  color: $terminal-fg-info;
 }
 .buttons {
   position: relative;
@@ -503,7 +520,7 @@ iframe {
   border: none;
 }
 figcaption {
-  color: #666;
+  color: $image-info; 
   text-align: center;
   font-size: 0.75em;
 }
@@ -512,7 +529,7 @@ figcaption {
   font-family: 'Open Sans', Arial, sans-serif;
   text-align: center;
   color: white;
-  background: #000;
+  background: $help-bg;
   opacity: 0.5;
   position: fixed;
   bottom: 25px;

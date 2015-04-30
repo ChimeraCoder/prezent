@@ -11,11 +11,11 @@
     min-height: 740px;
     overflow-x: hidden;
     overflow-y: auto;
-    background: #d7d7d7;
-    background: -o-radial-gradient(#f2f2f2, #bebebe);
-    background: -moz-radial-gradient(#f2f2f2, #bebebe);
-    background: -webkit-radial-gradient(#f2f2f2, #bebebe);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(#f2f2f2), to(#bebebe));
+    background: #d6d6d6;
+    background: -o-radial-gradient(#f2f2f2, #bfbfbf);
+    background: -moz-radial-gradient(#f2f2f2, #bfbfbf);
+    background: -webkit-radial-gradient(#f2f2f2, #bfbfbf);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(#f2f2f2), to(#bfbfbf));
     -webkit-font-smoothing: antialiased; }
 
   .slides {
@@ -195,7 +195,7 @@
     margin-bottom: 100px !important; }
 
   div.code {
-    background: #f2f2f2; }
+    background: black; }
 
   /* Add explicit links */
   a:link:after, a:visited:after {
@@ -208,7 +208,7 @@
 /* Styles for slides */
 .slides > article {
   font-family: 'Open Sans', Arial, sans-serif;
-  color: black;
+  color: #333333;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   font-size: 26px;
   line-height: 36px;
@@ -336,7 +336,7 @@ div.output {
   top: 50%;
   right: 40px;
   bottom: 40px;
-  background: #202020;
+  background: #212121;
   padding: 5px 10px;
   z-index: 2;
   border-radius: 10px;
@@ -357,10 +357,10 @@ div.output .stdout, div.output pre {
   color: #e6e6e6; }
 
 div.output .stderr, div.output .error {
-  color: #ffc8c8; }
+  color: #ffc7c7; }
 
 div.output .system, div.output .exit {
-  color: #ffe678; }
+  color: #ffe77a; }
 
 .buttons {
   position: relative;
@@ -414,7 +414,7 @@ iframe {
   border: none; }
 
 figcaption {
-  color: #666;
+  color: #666666;
   text-align: center;
   font-size: 0.75em; }
 
@@ -422,7 +422,7 @@ figcaption {
   font-family: 'Open Sans', Arial, sans-serif;
   text-align: center;
   color: white;
-  background: #000;
+  background: black;
   opacity: 0.5;
   position: fixed;
   bottom: 25px;
